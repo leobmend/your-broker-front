@@ -22,13 +22,13 @@ const Stocks = ({ token }) => {
 
   const getAtivos = (searchOptions) => {
     yourBrokerAPI.ativos(searchOptions)
-      .then(({ data }) => setStocks(data.data));
+      .then(({ data }) => setStocks(data));
   };
 
   useEffect(() => {
     if (!user.nome) {
       yourBrokerAPI.cliente(token)
-        .then(({ data }) => setUser(data.data));
+        .then(({ data }) => setUser(data));
     }
   });
 
