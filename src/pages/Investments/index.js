@@ -19,14 +19,14 @@ const Investments = ({ token }) => {
   useEffect(() => {
     if (!user.nome) {
       yourBrokerAPI.cliente(token)
-        .then(({ data }) => setUser(data.data));
+        .then(({ data }) => setUser(data));
     }
   });
 
   useEffect(() => {
     if (user.nome && !investments.length) {
       yourBrokerAPI.investimentos(token)
-        .then(({ data }) => setInvestments(data.data));
+        .then(({ data }) => setInvestments(data));
     }
   });
 
@@ -35,7 +35,7 @@ const Investments = ({ token }) => {
       <Header user={ user } menu={ { first: 'ativos', second: 'transacoes' } } />
       <List
         headers={ ['ticker', 'qtde', 'valor', 'total'] }
-        items={ investments.map((item) => (
+        items={ investments.filter((item) => item.qtdeAtivo).map((item) => (
           {
             ...item,
             valor: moneyFormat(item.valor),
