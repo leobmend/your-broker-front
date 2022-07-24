@@ -1,0 +1,49 @@
+.Transactions .transaction {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 30%;
+  justify-content: space-around;
+  width: 90%;
+}
+
+.Transactions .transaction .label {
+  color: black;
+  font-size: 17px;
+  font-weight: 700;
+  margin-top: 5px;
+  position: relative;
+  right: 100px;
+  top: 5px;
+}
+
+.Transactions input {
+  border: none;
+  border-radius: 5px;
+  box-shadow: 1px 1px 1px 2px rgb(99, 98, 98);
+  font-size: 30px;
+  font-weight: 800;
+  margin: 10px;
+  padding: 20px;
+  text-align: center;
+  width: 90%;
+}
+
+.Transactions input::placeholder {
+  color: rgb(79, 79, 79);
+  font-weight: 800;
+  text-align: center;
+}
+
+.Transactions .transaction-btns {
+  display: flex;
+  justify-content: center;
+  width: 90%;
+}
+
+.Transactions .transaction-btns .button {
+  box-shadow: 1px 1px 1px 1px rgb(99, 98, 98);
+  margin: auto;
+  padding: 10px;
+  width: 40%;
+}
