@@ -1,0 +1,70 @@
+.Stock .operation {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 40%;
+  justify-content: space-around;
+  width: 90%;
+}
+
+.Stock h4 .label {
+  color: black;
+  font-size: 14px;
+  position: relative;
+  right: 30px;
+  top: -15px;
+}
+
+.Stock .operation .label {
+  color: black;
+  font-size: 17px;
+  font-weight: 700;
+  margin-top: 5px;
+  position: relative;
+  right: 80px;
+  top: 5px;
+}
+
+.Stock .operation h2 .label {
+  background-color: red;
+  right: 10px;
+  top: -20px;
+}
+
+.Stock h4 {
+  margin: 5px 0;
+  padding: 10px 20px;
+  text-align: center;
+  width: 80%;
+}
+
+.Stock input {
+  border: none;
+  border-radius: 5px;
+  box-shadow: 1px 1px 1px 2px rgb(99, 98, 98);
+  font-size: 30px;
+  font-weight: 800;
+  margin: 10px;
+  padding: 20px;
+  text-align: center;
+  width: 90%;
+}
+
+.Stock input::placeholder {
+  color: rgb(79, 79, 79);
+  font-weight: 800;
+  text-align: center;
+}
+
+.Stock .operation-btns {
+  display: flex;
+  justify-content: center;
+  width: 90%;
+}
+
+.Stock .operation-btns .button {
+  box-shadow: 1px 1px 1px 1px rgb(99, 98, 98);
+  margin: auto;
+  padding: 10px;
+  width: 40%;
+}
