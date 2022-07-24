@@ -17,12 +17,12 @@ const Login = ({ setToken }) => {
 
   const login = () => {
     yourBrokerAPI.login({ email, senha })
-      .then(({ data, error }) => {
+      .then(({ token, error }) => {
         if (error) toast.error(error);
         else {
           toast.success('Login realizado com sucesso');
-          setToken(data.token);
-          myLocalStorage.setItem('your-broker-token', data.token);
+          setToken(token);
+          myLocalStorage.setItem('your-broker-token', token);
           history.push('/investimentos');
         }
       });
@@ -30,12 +30,12 @@ const Login = ({ setToken }) => {
 
   const signUp = () => {
     yourBrokerAPI.signUp({ nome, email, senha })
-      .then(({ data, error }) => {
+      .then(({ token, error }) => {
         if (error) toast.error(error);
         else {
           toast.success('Cadastro realizado com sucesso');
-          setToken(data.token);
-          myLocalStorage.setItem('your-broker-token', data.token);
+          setToken(token);
+          myLocalStorage.setItem('your-broker-token', token);
           history.push('/investimentos');
         }
       });
